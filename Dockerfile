@@ -8,7 +8,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY . /usr/share/nginx/html
 
 # Copy the custom Nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+#COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose port 80 for HTTP traffic (default for Nginx)
 EXPOSE 80
