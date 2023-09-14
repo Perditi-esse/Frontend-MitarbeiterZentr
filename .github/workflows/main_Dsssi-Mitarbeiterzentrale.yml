@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://containersfallstudie.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_c60f34d76c5f4ed287de4c37fd220acf }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_adaf6d16496d4f41b43e350cbce79422 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_ae691ee00ae7418cafdad2dc4267f277 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_d003c6cb1f514ef3ac70c444f751179b }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: containersfallstudie.azurecr.io/frontendmitarbeiterzentr:${{ github.sha }}
+        tags: containersfallstudie.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_ae691ee00ae7418cafdad2dc4267f277 }}/frontendmitzentr:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'Dsssi-Mitarbeiterzentrale'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0158801bb9784c75b9ee9e0324ed3f43 }}
-        images: 'containersfallstudie.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_c60f34d76c5f4ed287de4c37fd220acf }}/frontendmitarbeiterzentr:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e92028aa113b43b18e0414a626d6fa10 }}
+        images: 'containersfallstudie.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_ae691ee00ae7418cafdad2dc4267f277 }}/frontendmitzentr:${{ github.sha }}'
