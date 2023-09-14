@@ -1,0 +1,187 @@
+.main_text {
+  font-size: 36px; /* Schriftgröße */
+  color: #333; /* Schriftfarbe (Hexadezimalwert oder Farbname) */
+  font-weight: bold; /* Fett gedruckte Schrift */
+  text-align: center; /* Text zentrieren */
+  text-transform: uppercase; /* Text in Großbuchstaben umwandeln */
+  margin-top: 0.7cm;
+}
+
+.head {
+  display: flex; /* Verwenden von Flexbox für die Anordnung von Bild und Text */
+  align-items: center; /* Zentrieren der Elemente vertikal */
+}
+
+.head_logo {
+  max-width: 500px; /* Maximalbreite für das Bild */
+  margin-right: 100px; /* Abstand zwischen Bild und Text */
+}
+
+.welcome{
+  text-align: center;
+  flex: 1;
+}
+
+
+
+.container1 {
+  display: flex; /* Flexbox verwenden */
+  justify-content: space-between; /* Abstand zwischen den Aufzählungslisten */
+  align-items: center;
+}
+
+#abmelden-button{
+  text-align: right;
+  text-align: right;
+  margin-left: 4cm;
+  width: 3cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#abmelden-button:hover{
+  background-color: #f0f0f0;
+}
+
+.list {
+  flex: 1; /* Gleicher Anteil des verfügbaren Platzes für jede Liste */
+  text-align: center; /* Text in der Mitte ausrichten */
+  padding: 10px; /* Innenabstand für jede Liste */
+}
+
+h2 {
+  font-size: 18px; /* Überschriftenformatierung */
+  margin-bottom: 10px; /* Abstand unter den Überschriften */
+}
+
+ul {
+  padding-left: 20px; /* Linken Einzug für Aufzählungen */
+}
+
+body{
+  margin-left: 2cm;
+  margin-right: 2cm;
+  background-color: #D3D3D3;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+.unten{
+  position: fixed;
+  bottom: 7px;
+}
+
+.unten1{
+  position: fixed;
+  bottom: 7px;
+  left: 175px;
+}
+.unten2{
+  position: fixed;
+  bottom: 7px;
+  left: 290px;
+}
+.unten3{
+  position: fixed;
+  bottom: 7px;
+  left: 470px;
+}
+
+/* Stil für die tabellenartige Anordnung */
+.film-table {
+  display: table;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-collapse: collapse; /* Rahmen zwischen den Zellen entfernen */
+}
+
+.film-cell {
+  display: table-cell;
+  vertical-align: top; /* Text in den Zellen oben ausrichten */
+  padding: 20px;
+  border: 1px solid #ccc; /* Rahmen für die Zellen hinzufügen */
+}
+/* Stil für das Bild */
+.film-image {
+  width: 200px; /* Festgelegte Breite für den Bildcontainer */
+  height: 300px; /* Festgelegte Höhe für den Bildcontainer */
+  position: relative; /* Positionierung für das Label */
+}
+
+.film-image img {
+  width: 100%; /* Das Bild füllt den Container */
+  height: 100%; /* Das Bild füllt den Container */
+  object-fit: cover; /* Das Bild wird proportional skaliert und beschnitten */
+}
+
+/* Stil für die Boxen */
+.info-box {
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.info-label {
+  font-weight: bold;
+}
+
+.info-text {
+  margin-top: 5px;
+}
+
+.table-spacing {
+  margin-bottom: 20px; /* Abstand zwischen den Tabellen, nach Bedarf anpassen */
+}
+
+#hinzufügen-button{
+  width: 7cm;
+  height: 1cm;
+ color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+#savechanges-button{
+  margin-left: 1cm;
+  width: 7cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+#logout{
+  margin-left: 1cm;
+  width: 7cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+#hinzufügen-button:hover{
+  background-color: #f0f0f0;
+}
+
+#savechanges-button:hover{
+  background-color: #f0f0f0;
+}
+
+#logout:hover{
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Buchungen überprüfen</title>
+  <link rel="stylesheet" href="css/scanner.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="head">
+  <img src="img/logo-transparent-png.png" alt="Bild" class="head_logo">
+  <div class="container1">
+    <h1 class="main_text">
+      Mitarbeiterzentrale</h1>
+    <button id="abmelden-button">zurück</button>
+  </div>
+</div>
+
+<h1 class="welcome">Buchungen überprüfen</h1>
+
+
+<!-- QR SCANNER CODE BELOW  -->
+<div class="row">
+  <div class="col">
+    <div id="reader" style="position: relative;
+     padding: 0px; border: 1px solid silver;">
+      <div style="text-align: left; margin: 0px;">
+        <div style="position: absolute; top: 10px; right: 10px; z-index: 2; display: block; padding: 5pt; border: 1px solid silver; font-size: 10pt; background: rgb(248, 248, 248);">
+        </div>
+        <div id="reader__header_message" style="display: none; text-align: center; font-size: 14px; padding: 2px 10px; margin: 4px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(246, 246, 246); background: rgba(0, 0, 0, 0); color: rgb(17, 17, 17);">Requesting camera permissions...</div>
+      </div>
+      <div id="reader__scan_region" style="width: 100%; min-height: 100px; text-align: center; position: relative;">
+        <video muted="true" playsinline="" style="width: 500px;">
+        </video>
+        <canvas id="qr-canvas" width="250" height="250" style="width: 250px; height: 250px; display: none;">
+        </canvas>
+        <div id="qr-shaded-region" style="position: absolute; border-width: 62.5px 125px; border-style: solid; border-color: rgba(0, 0, 0, 0.48); box-sizing: border-box; inset: 0px;">
+          <div style="position: absolute; background-color: rgb(255, 255, 255); width: 40px; height: 5px; top: -5px; left: 0px;">
+          </div>
+          <div style="position: absolute; background-color: rgb(255, 255, 255); width: 40px; height: 5px; top: -5px; right: 0px;">
+          </div>
+          <div style="position: absolute; background-color: rgb(255, 255, 255); width: 40px; height: 5px; top: 255px; left: 0px;">
+          </div>
+          <div style="position: absolute; background-color: rgb(255, 255, 255); width: 40px; height: 5px; top: 255px; right: 0px;">
+          </div>
+          <div style="position: absolute; background-color: rgb(255, 255, 255); width: 5px; height: 45px; top: -5px; left: -5px;">
+          </div>
+          <div style="position: absolute; background-color: rgb(255, 255, 255); width: 5px; height: 45px; top: 215px; left: -5px;">
+          </div>
+          <div style="position: absolute; background-color: rgb(255, 255, 255); width: 5px; height: 45px; top: -5px; right: -5px;">
+          </div>
+          <div style="position: absolute; background-color: rgb(255, 255, 255); width: 5px; height: 45px; top: 215px; right: -5px;">
+          </div>
+        </div>
+        <div style="display: none; position: absolute; top: 0px; z-index: 1; background: yellow; text-align: center; width: 100%;">Scanner paused</div>
+      </div>
+      <div id="reader__dashboard" style="width: 100%;">
+        <div id="reader__dashboard_section" style="width: 100%; padding: 10px 0px; text-align: left;">
+          <div>
+            <div id="reader__dashboard_section_csr" style="display: block; text-align: center;">
+              <span style="margin-right: 10px;">Kamera auswählen
+                <select id="reader__camera_selection" disabled="">
+                  <option value="818BAA99FD5FBF0C0E5B8760C42508D4FFEFE44A">FaceTime HD-Kamera</option><
+                  option value="ED11C78E5EF791F1FB7C9C0C2D4F38D716815984">Schreibtischansicht-Kamera von „iPhone von SJH“
+                  </option>
+                  <option value="FA5B8BFFEFAB59B10E15D3880A83856E8FE29845">Kamera von „iPhone von SJH“</option>
+                </select>
+              </span>
+              <span>
+                <button style="opacity: 1; display: none;">Scannen starten</button>
+                <button style="display: inline-block;">Scannen stoppen</button>
+              </span>
+            </div>
+            <div id="reader__dashboard_section_fsr" style="text-align: center; display: none;">
+              <input id="reader__filescan_input" accept="image/*" type="file" disabled="" style="width: 200px;">
+              <span> Select Image</span>
+            </div>
+          </div>
+          <div style="text-align: center;"><a id="reader__dashboard_section_swaplink" href="#scan-using-file" style="text-decoration: underline; display: none;">Bild scannen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col" style="padding: 30px">
+    <h4>Ergebnis des Scans</h4>
+    <div id="result">
+      ---hier werden die Ergebnisse stehen---
+    </div>
+  </div>
+
+</div>
+<!-- partial -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.2.0/html5-qrcode.min.js"></script><script src="./script.js"></script>
+<script src="js/scanner.js"></script>
+
+
+</body>
+
+</html>
