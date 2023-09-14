@@ -1,59 +1,52 @@
-name: Frontend-Webseite to Azure Container Registry
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy container app to Azure Web App - Dsssi-Mitarbeiterzentrale
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  build-and-push:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        # Check out the code from the repository.
+      - uses: actions/checkout@v2
 
-      - name: Login to Azure Container Registry
-        run: |
-          echo ${{ secrets.AZUREREGISTRYPW }} | docker login containersfallstudie.azurecr.io -u ${{ secrets.AZUREREGISTRYNAME }} --password-stdin
-        # Log in to your Azure Container Registry using the provided username and password secrets.
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-      - name: Build Docker image
-        run: |
-          docker build -t containersfallstudie.azurecr.io/your-image-name:latest .
-          docker images
-        wormy github pipeline does not work it is not even being executed on  push
-        name: Frontend-Webseite to Azure Container Registry
-        
-        on:
-          push:
-            branches:
-              - Frontend-Webseite
-        
-        jobs:
-          build-and-push:
-            runs-on: ubuntu-latest
-        
-            steps:
-              - name: Checkout code
-                uses: actions/checkout@v2
-                # Check out the code from the repository.
-        
-              - name: Login to Azure Container Registry
-                run: |
-                  echo ${{ secrets.AZUREREGISTRYPW }} | docker login containersfallstudie.azurecr.io -u ${{ secrets.AZUREREGISTRYNAME }} --password-stdin
-                # Log in to your Azure Container Registry using the provided username and password secrets.
-        
-              - name: Build Docker image
-                run: |
-                  docker build -t containersfallstudie.azurecr.io/webseite:latest .
-                  docker images
-                working-directory: ./  # Dockerfile is at the root of the repository
-                # Build the Docker image, tagging it with the full path to your Azure Container Registry.
-        
-              - name: Push Docker image to Azure Container Registry
-                run: |
-                  docker push containersfallstudie.azurecr.io/webseite:latest
-                # Push the Docker image to your Azure Container Registry.
-          docker push containersfallstudie.azurecr.io/your-image-name:latest
-        # Push the Docker image to your Azure Container Registry.
+      - name: Log in to container registry
+        uses: docker/login-action@v2
+        with:
+          registry: https://containersfallstudie.azurecr.io/
+          username: ${{ secrets.AzureAppService_ContainerUsername_c60f34d76c5f4ed287de4c37fd220acf }}
+          password: ${{ secrets.AzureAppService_ContainerPassword_adaf6d16496d4f41b43e350cbce79422 }}
+
+      - name: Build and push container image to registry
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: containersfallstudie.azurecr.io/frontendmitarbeiterzentr:${{ github.sha }}
+          file: ./Dockerfile
+
+    deploy:
+      runs-on: ubuntu-latest
+      needs: build
+      environment:
+        name: 'production'
+        url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+      steps:
+        - name: Deploy to Azure Web App
+          id: deploy-to-webapp
+          uses: azure/webapps-deploy@v2
+          with:
+            app-name: 'Dsssi-Mitarbeiterzentrale'
+            slot-name: 'production'
+            publish-profile: ${{ secrets.AzureAppService_PublishProfile_0158801bb9784c75b9ee9e0324ed3f43 }}
+            images: 'containersfallstudie.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_c60f34d76c5f4ed287de4c37fd220acf }}/frontendweb:${{ github.sha }}'
