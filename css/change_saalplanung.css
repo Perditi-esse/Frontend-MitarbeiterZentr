@@ -97,3 +97,30 @@ a{
   bottom: 7px;
   left: 470px;
 }
+
+.säle-row {
+  display: flex;
+  justify-content: center; /* Buttons in der Mitte der Seite zentrieren */
+  margin-top: 3cm; /* Abstand von 3 cm von oben hinzufügen */
+}
+
+/* Stil für die Buttons */
+.säle {
+  width: 7cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 1.5cm; /* Abstand von 1,5 cm zwischen den Buttons */
+  border-radius: 5px;
+}
+.table-spacing{
+  margin-top: 20px;
+}
+
+.säle:hover{
+  background-color: #f0f0f0;
+}
