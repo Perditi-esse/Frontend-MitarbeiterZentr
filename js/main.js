@@ -2,7 +2,7 @@ const logoutButton = document.getElementById("abmelden-button");
 
 logoutButton.addEventListener("click", function () {
   // Hier die URL der Zielseite einfügen, zu der Sie weiterleiten möchten
-  const targetURL = "Index.html"; // Ändern Sie dies entsprechend Ihrer Zielseite
+  const targetURL = "index.html"; // Ändern Sie dies entsprechend Ihrer Zielseite
 
   // Weiterleitung zur Zielseite
   window.location.href = targetURL;
