@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Filme hinzufügen</title>
+  <link rel="stylesheet" href="css/change_filmdetails.css">
+</head>
+<body>
+
+<form>
+<div>
+  <div class="film-table">
+
+    <div class="film-cell">
+      <!-- Reihe mit 3 Boxen -->
+      <div class="info-box">
+        <div class="info-label">Titel:</div>
+        <input type="text" class="info-text" id="titelInput">
+      </div>
+      <div class="info-box">
+        <div class="info-label">Genre:</div>
+        <input type="text" class="info-text" id="genreInput">
+      </div>
+      <div class="info-box">
+        <div class="info-label">FSK:</div>
+        <input type="text" class="info-text" id="fskInput">
+      </div>
+      <div class="info-box">
+        <div class="info-label">Dauer:</div>
+        <input type="text" class="info-text" id="dauerInput">
+      </div>
+    </div>
+    <div class="film-cell">
+      <!-- 4 Boxen in der rechten Spalte -->
+      <div class="info-box">
+        <div class="info-label">Kategorie:</div>
+        <input type="text" class="info-text" id="kategorieInput">
+      </div>
+      <div class="info-box">
+        <div class="info-label">Erwachsene:</div>
+        <input type="text" class="info-text" id="erwachseneInput">
+      </div>
+      <div class="info-box">
+        <div class="info-label">Schüler, Azubi, Student:</div>
+        <input type="text" class="info-text" id="sigtermInput">
+      </div>
+      <div class="info-box">
+        <div class="info-label">Kinder:</div>
+        <input type="text" class="info-text" id="kinderInput">
+      </div>
+    </div>
+    <div class="film-cell">
+      <!-- 4 Boxen in der rechten Spalte -->
+      <div class="info-box">
+        <div class="info-label">Beschreibung:</div>
+        <input type="text" class="info-text" id="beschreibungInput">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="table-spacing"></div>
+<button type="button" id="sendRequest" onclick="generateOutput()">Film hinzufügen</button>
+
+<div class="table-spacing"></div>
+  <div id="output"></div>
+  <div id="customText"></div>
+  <script src="js/popup_hinzufügen.js"></script>
+
+</form>
+</body>
+</html>
