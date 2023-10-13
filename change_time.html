@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/time.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+
+<body>
+
+<div class="head">
+  <img src="img/logo-transparent-png.png" alt="Bild" class="head_logo">
+  <div class="container1">
+    <h1 class="main_text">
+      Mitarbeiterzentrale</h1>
+    <button id="abmelden-button">zurück</button>
+  </div>
+</div>
+
+
+<h1 class="welcome">Filmzeiten bearbeiten</h1>
+
+<div class="table-spacing"></div>
+
+<div id="tables">
+<table id="saal1">
+  <caption>Saal 1</caption>
+  <tr>
+    <th>Zeit</th>
+    <th>Montag</th>
+    <th>Dienstag</th>
+    <th>Mittwoch</th>
+    <th>Donnerstag</th>
+    <th>Freitag</th>
+    <th>Samstag</th>
+    <th>Sonntag</th>
+  </tr>
+  <tr>
+    <th>14:00 Uhr</th>
+    <td id="s1_14_0"></td>
+    <td id="s1_14_1"></td>
+    <td id="s1_14_2"></td>
+    <td id="s1_14_3"></td>
+    <td id="s1_14_4"></td>
+    <td id="s1_14_5"></td>
+    <td id="s1_14_6"></td>
+  </tr>
+  <tr>
+    <th>20:00 Uhr</th>
+    <td id="s1_20_0"></td>
+    <td id="s1_20_1"></td>
+    <td id="s1_20_2"></td>
+    <td id="s1_20_3"></td>
+    <td id="s1_20_4"></td>
+    <td id="s1_20_5"></td>
+    <td id="s1_20_6"></td>
+  </tr>
+</table>
+
+<table id="saal2">
+  <caption>Saal 2</caption>
+  <tr>
+    <th>Zeit</th>
+    <th>Montag</th>
+    <th>Dienstag</th>
+    <th>Mittwoch</th>
+    <th>Donnerstag</th>
+    <th>Freitag</th>
+    <th>Samstag</th>
+    <th>Sonntag</th>
+  </tr>
+  <tr>
+    <th>14:00 Uhr</th>
+    <td id="s2_14_0"></td>
+    <td id="s2_14_1"></td>
+    <td id="s2_14_2"></td>
+    <td id="s2_14_3"></td>
+    <td id="s2_14_4"></td>
+    <td id="s2_14_5"></td>
+    <td id="s2_14_6"></td>
+  </tr>
+  <tr>
+    <th>20:00 Uhr</th>
+    <td id="s2_20_0"></td>
+    <td id="s2_20_1"></td>
+    <td id="s2_20_2"></td>
+    <td id="s2_20_3"></td>
+    <td id="s2_20_4"></td>
+    <td id="s2_20_5"></td>
+    <td id="s2_20_6"></td>
+  </tr>
+</table>
+
+
+<div class="table-spacing"></div>
+
+
+
+<div class="table-spacing"></div>
+
+
+<button id="update-button" >Aktualisieren</button>
+</div>
+<div class="table-spacing"></div>
+<div id="vorstellungen">
+  <div class="vorstellung_add">
+    <div class="hinzufügen-schrift">Vorstellung hinzufügen</div>
+    <table>
+      <tr>
+        <td>Filmtitel</td>
+        <td><input type="text" id="filmtitel1" placeholder="Filmtitel"></td>
+      </tr>
+      <tr>
+        <td>Datum</td>
+        <td><input type="text" id="datum1" placeholder="JJJJ-MM-TT"></td>
+      </tr>
+      <tr>
+        <td>Uhrzeit</td>
+        <td><input type="text" id="uhrzeit1" placeholder="HH:MM:SS"></td>
+      </tr>
+      <tr>
+        <td>Kinosaal</td>
+        <td><input type="text" id="kinosaal1" placeholder="1 oder 2"></td>
+      </tr>
+    </table>
+    <button id="hinzufuegen">Vorstellung hinzufügen</button>
+
+  </div>
+  <div class="vorstellung_delete">
+    <div class="hinzufügen-schrift">Vorstellung entfernen</div>
+    <table>
+      <tr>
+        <td>Filmtitel</td>
+        <td><input type="text" id="filmtitel2" placeholder="Filmtitel"></td>
+      </tr>
+      <tr>
+        <td>Datum</td>
+        <td><input type="text" id="datum2" placeholder="JJJJ-MM-TT"></td>
+      </tr>
+      <tr>
+        <td>Uhrzeit</td>
+        <td><input type="text" id="uhrzeit2" placeholder="HH:MM:SS"></td>
+      </tr>
+      <tr>
+        <td>Kinosaal</td>
+        <td><input type="text" id="kinosaal2" placeholder="1 oder 2"></td>
+      </tr>
+    </table>
+
+    <button id="entfernen">Vorstellung entfernen</button>
+  </div>
+</div>
+<div class="table-spacing"></div>
+<div id="output"></div>
+<div id="results"></div>
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/change_time.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>-->
+
+
+<script>
+  // JavaScript, um das Bild beim Datei-Upload zu ändern
+
+</script>
+</body>
+
+<footer>
+
+
+
+</footer>
+
+</html>
