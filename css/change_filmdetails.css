@@ -1,0 +1,215 @@
+.main_text {
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0.7cm;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.head_logo {
+  max-width: 500px;
+  margin-right: 100px;
+}
+
+.welcome {
+  text-align: center;
+  flex: 1;
+}
+
+.container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#abmelden-button {
+  text-align: right;
+  text-align: right;
+  margin-left: 4cm;
+  width: 3cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#abmelden-button:hover {
+  background-color: #f0f0f0;
+}
+
+.list {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+body {
+  margin-left: 2cm;
+  margin-right: 2cm;
+  background-color: #D3D3D3;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+/* Ihr ursprünglicher CSS für die Tabelle */
+.film-table {
+  display: table;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.film-cell input[type="text"] {
+  width: 100%;
+}
+
+.film-cell {
+  display: table-cell;
+  vertical-align: top;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.info-box {
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.info-label {
+  font-weight: bold;
+}
+
+.info-text {
+  margin-top: 5px;
+}
+
+.table-spacing {
+  margin-bottom: 20px;
+}
+#filmTableContainer {
+  margin-top: 20px; /* Passen Sie den Wert nach Bedarf an */
+}
+
+#hinzufügen-button {
+  width: 7cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+#savechanges-button {
+  margin-left: 1cm;
+  width: 7cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+#entfernen-button {
+  margin-left: 1cm;
+  width: 7cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+#entfernen-button:hover {
+  background-color: #f0f0f0;
+}
+
+#sendDelete-Button {
+  margin-left: 1cm;
+  width: 7cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  margin-top: 0.5cm;
+}
+
+#sendDelete-Button:hover {
+  background-color: #f0f0f0;
+}
+
+#hinzufügen-button:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+#sendRequest {
+  width: 7cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+#sendRequest:hover {
+  background-color: #f0f0f0;
+}
+
+#hinzufügen:hover {
+  background-color: #f0f0f0;
+}
+
+#savechanges-button:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+#results {
+  color: #D3D3D3;
+
+}
+
+#customText {
+  color: green;
+  font-weight: bold;
+}
+
+#customTextDelete {
+  color: green;
+  font-weight: bold;
+  margin-top: 1cm;
+}
+
