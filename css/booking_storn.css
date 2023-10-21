@@ -1,0 +1,183 @@
+.main_text {
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0.7cm;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.head_logo {
+  max-width: 500px;
+  margin-right: 100px;
+}
+
+.welcome {
+  text-align: center;
+  flex: 1;
+}
+
+.container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#abmelden-button {
+  text-align: right;
+  text-align: right;
+  margin-left: 4cm;
+  width: 3cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#abmelden-button:hover {
+  background-color: #f0f0f0;
+}
+
+.list {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+body {
+  margin-left: 2cm;
+  margin-right: 2cm;
+  background-color: #D3D3D3;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+
+.table-spacing {
+  margin-bottom: 20px; /* Abstand zwischen den Tabellen, nach Bedarf anpassen */
+}
+table {
+  border-collapse: collapse; /* Wichtig: Verwende "collapse" anstelle von "separate" */
+  border-spacing: 10px; /* Ändere diesen Wert nach Bedarf */
+  margin: 0 auto; /* Zentriere die Tabelle horizontal */
+}
+table th, table td {
+  padding: 10px; /* Ändere diesen Wert nach Bedarf */
+  text-align: center; /* Zentriere den Text horizontal */
+  border: 1px solid black; /* Rahmen um jede Zelle hinzufügen */
+  transition: all 0.3s ease; /* CSS-Übergang für einen sanften Effekt */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Schatten für 3D-Effekt
+}
+table tr {
+  border: 1px solid black; /* Rahmen um jede Zeile hinzufügen */
+}
+table th {
+  border: 1px solid black; /* Rahmen um Spaltenüberschriften hinzufügen */
+}
+
+
+.buchung_delete{
+
+  width: 400px;
+  border: 2px solid #ccc; /* Äußerer Rahmen */
+  border-radius: 10px; /* Abrundung der Ecken */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 3D-Box-Schatten */
+  padding: 15px; /* Innenabstand für den Inhalt */
+  display: block;
+  margin: 0 auto;
+}
+
+.buchung_delete:hover {
+  background-color: silver;
+}
+
+.hinzufügen-schrift {
+  font-size: 20px; /* Schriftgröße */
+  color: #333; /* Schriftfarbe (Hexadezimalwert oder Farbname) */
+  font-weight: bold; /* Fett gedruckte Schrift */
+  text-align: center; /* Text zentrieren */
+  margin-top: 0.7cm;
+  margin-bottom: 10px;
+}
+
+#results{
+  color: #D3D3D3;
+  font-size: xx-small;
+}
+
+#bookingStornButton {
+  display: block;
+  margin: 0 auto;
+  width: 7cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+
+}
+
+#bookingStornButton:hover{
+  background-color: #f0f0f0;
+}
+
+#bookingPayButton {
+  display: block;
+  margin: 0 auto;
+  width: 7cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+
+}
+
+#bookingPayButton:hover{
+  background-color: #f0f0f0;
+}
+
+.buchung_pay{
+
+  width: 400px;
+  border: 2px solid #ccc; /* Äußerer Rahmen */
+  border-radius: 10px; /* Abrundung der Ecken */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 3D-Box-Schatten */
+  padding: 15px; /* Innenabstand für den Inhalt */
+  display: block;
+  margin: 0 auto;
+}
+
+.buchung_pay:hover {
+  background-color: silver;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Platziert die Elemente nebeneinander mit Abstand */
+}
