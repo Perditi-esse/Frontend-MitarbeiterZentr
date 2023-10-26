@@ -1,0 +1,81 @@
+.main_text {
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0.7cm;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.head_logo {
+  max-width: 500px;
+  margin-right: 100px;
+}
+
+.welcome {
+  text-align: center;
+  flex: 1;
+}
+
+.container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#abmelden-button {
+  text-align: right;
+  text-align: right;
+  margin-left: 4cm;
+  width: 3cm;
+  height: 1cm;
+  color: black;
+  background-color: #e0e0e0;
+  border: 2px white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#abmelden-button:hover {
+  background-color: #f0f0f0;
+}
+
+.list {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+body {
+  margin-left: 2cm;
+  margin-right: 2cm;
+  background-color: #D3D3D3;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+
+.table-spacing {
+  margin-bottom: 20px; /* Abstand zwischen den Tabelle
+}
